@@ -97,19 +97,21 @@ export function Hero({ isLoaded = false }: HeroProps) {
 
       {/* Content */}
       <div className="max-w-[1280px] w-full mx-auto relative z-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg text-gray-400 mb-5 uppercase tracking-[0.3em]"
-        >
-          <span>
-            <span className="font-black text-white">C</span>hungbuk{' '}
-            <span className="font-black text-white">U</span>niv.{' '}
-            <span className="font-black text-white">Vi</span>sual{' '}
-            <span className="font-black text-white">C</span>++ Club
-          </span>
-        </motion.h2>
+        <div className="overflow-hidden mb-5">
+          <motion.h2
+            initial={{ y: '120%' }}
+            animate={isLoaded ? { y: 0 } : { y: '120%' }}
+            transition={{ duration: 1.5, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
+            className="text-lg text-gray-400 uppercase tracking-[0.3em]"
+          >
+            <span>
+              <span className="font-black text-white">C</span>hungbuk{' '}
+              <span className="font-black text-white">U</span>niv.{' '}
+              <span className="font-black text-white">Vi</span>sual{' '}
+              <span className="font-black text-white">C</span>++ Club
+            </span>
+          </motion.h2>
+        </div>
         
         <div className="overflow-hidden mb-2">
           <motion.h1
