@@ -21,14 +21,14 @@ export function Navigation({ isLoaded = false }: NavigationProps) {
       transition={{ duration: 1, delay: 1.2 }}
       className="fixed top-0 w-full z-50 mix-blend-difference"
     >
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8 py-5 flex justify-between items-center">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8 py-5 flex justify-between items-center">
         <button 
           onClick={() => scrollToSection('home')}
           className="text-2xl font-extrabold tracking-tighter hover:opacity-70 transition-opacity"
         >
           CUVIC.
         </button>
-        <div className="flex items-center gap-8 text-sm font-medium uppercase tracking-[0.2em]">
+        <div className="flex items-center gap-4 md:gap-8 text-xs md:text-sm font-medium uppercase tracking-[0.2em] overflow-x-auto scrollbar-hide">
           <button onClick={() => scrollToSection('home')} className="hover:underline underline-offset-4 px-3 py-1 hover:bg-white hover:text-black transition-all rounded">
             About
           </button>

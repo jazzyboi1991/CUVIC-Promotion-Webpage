@@ -34,7 +34,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
   ];
 
   return (
-    <section id="home" className="h-[982px] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black">
+    <section id="home" className="min-h-screen lg:h-[982px] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black">
       {/* Background Gallery - Infinite Scroll */}
       <div className="absolute inset-0 z-0 select-none flex flex-col justify-center gap-[100px]">
         <div className="w-full">
@@ -102,7 +102,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
             initial={{ y: '120%' }}
             animate={isLoaded ? { y: 0 } : { y: '120%' }}
             transition={{ duration: 1.5, delay: 0.4, ease: [0.76, 0, 0.24, 1] }}
-            className="text-lg text-gray-400 uppercase tracking-[0.3em]"
+            className="text-sm md:text-lg text-gray-400 uppercase tracking-[0.3em]"
           >
             <span>
               <span className="font-black text-white">C</span>hungbuk{' '}
@@ -118,7 +118,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
             initial={{ y: '120%' }}
             animate={isLoaded ? { y: 0 } : { y: '120%' }}
             transition={{ duration: 1.5, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
-            className="text-[100px] leading-[1.1] font-black tracking-tighter"
+            className="text-5xl md:text-[100px] leading-[1.1] font-black tracking-tighter"
           >
             <span>NON-STRUCT</span>
           </motion.h1>
@@ -129,7 +129,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
             initial={{ y: '120%' }}
             animate={isLoaded ? { y: 0 } : { y: '120%' }}
             transition={{ duration: 1.5, delay: 0.6, ease: [0.76, 0, 0.24, 1] }}
-            className="text-[100px] leading-[1.1] font-black tracking-tighter"
+            className="text-5xl md:text-[100px] leading-[1.1] font-black tracking-tighter"
           >
             <span 
               className="text-outline"
@@ -151,7 +151,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
         >
           <div className="h-[1px] w-full bg-gradient-to-r from-gray-600 via-white to-gray-600 mb-8" />
           
-          <div className="grid grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
               <p className="text-lg font-light leading-relaxed text-gray-300">
                 데이터 분석, 알고리즘, 그리고 프로그래밍의 경계를 넘어 함께<br />성장하는 개발자 커뮤니티

@@ -25,7 +25,7 @@ export function Recruitment() {
   };
 
   return (
-    <footer id="join" className="h-[982px] bg-white text-black py-24 px-6 relative flex items-center" ref={ref}>
+    <footer id="join" className="min-h-screen lg:h-[982px] bg-white text-black py-24 px-6 relative flex items-center" ref={ref}>
       <div className="max-w-[1280px] w-full mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -34,7 +34,7 @@ export function Recruitment() {
           className="flex-1"
         >
           <div className="uppercase tracking-[0.3em] font-bold mb-4 text-sm">Recruitment</div>
-          <h2 className="text-7xl font-black tracking-tighter leading-[1.1] mb-6">
+          <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-6">
             JOIN
             <br />
             CUVIC

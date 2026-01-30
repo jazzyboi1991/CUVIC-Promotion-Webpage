@@ -105,3 +105,6 @@ build/
 
 # Archive files
 CUVIC Club Promotion Website.zip
+
+# MCP Files
+.playwright-mcp/

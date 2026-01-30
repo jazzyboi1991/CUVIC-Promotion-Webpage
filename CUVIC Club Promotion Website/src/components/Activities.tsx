@@ -9,7 +9,7 @@ export function Activities() {
   });
 
   return (
-    <section id="activities" className="h-[982px] px-6 py-24 bg-[#0a0a0a] flex items-center" ref={ref}>
+    <section id="activities" className="min-h-screen lg:h-[982px] px-6 py-24 bg-[#0a0a0a] flex items-center" ref={ref}>
       <div className="max-w-[1280px] w-full mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -21,13 +21,13 @@ export function Activities() {
           <span className="text-gray-500 text-sm uppercase tracking-widest">(Activities)</span>
         </motion.div>
 
-        <div className="grid grid-cols-4 gap-4" style={{ height: '450px' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:h-[450px]">
           {/* Card 1: Algorithm Study */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="group relative bg-[#1c1c1c] p-8 rounded-2xl overflow-hidden hover:bg-gray-800 transition-all duration-500 col-span-2 row-span-2 cursor-default"
+            className="group relative bg-[#1c1c1c] p-8 rounded-2xl overflow-hidden hover:bg-gray-800 transition-all duration-500 col-span-1 md:col-span-2 lg:col-span-2 row-span-1 lg:row-span-2 cursor-default h-[300px] lg:h-auto"
           >
             <div className="absolute inset-0 overflow-hidden">
               <ImageWithFallback 
@@ -59,7 +59,7 @@ export function Activities() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="group relative bg-[#1c1c1c] p-8 rounded-2xl overflow-hidden hover:bg-gray-800 transition-all duration-500 cursor-default col-span-2 row-span-1"
+            className="group relative bg-[#1c1c1c] p-8 rounded-2xl overflow-hidden hover:bg-gray-800 transition-all duration-500 cursor-default col-span-1 md:col-span-2 lg:col-span-2 row-span-1 h-[250px] lg:h-auto"
           >
             <div className="absolute inset-0 overflow-hidden">
               <ImageWithFallback 
@@ -85,7 +85,7 @@ export function Activities() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="group relative bg-[#1c1c1c] p-8 rounded-2xl overflow-hidden hover:bg-gray-800 transition-all duration-500 cursor-default col-span-1 row-span-1"
+            className="group relative bg-[#1c1c1c] p-8 rounded-2xl overflow-hidden hover:bg-gray-800 transition-all duration-500 cursor-default col-span-1 lg:col-span-1 row-span-1 h-[250px] lg:h-auto"
           >
             <div className="absolute inset-0 overflow-hidden">
               <ImageWithFallback 
@@ -111,7 +111,7 @@ export function Activities() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="group relative bg-white/70 text-black p-8 rounded-2xl overflow-hidden hover:bg-white/80 transition-all duration-500 cursor-default col-span-1 row-span-1"
+            className="group relative bg-white/70 text-black p-8 rounded-2xl overflow-hidden hover:bg-white/80 transition-all duration-500 cursor-default col-span-1 lg:col-span-1 row-span-1 h-[250px] lg:h-auto"
           >
             <div className="absolute inset-0 overflow-hidden">
               <ImageWithFallback 
