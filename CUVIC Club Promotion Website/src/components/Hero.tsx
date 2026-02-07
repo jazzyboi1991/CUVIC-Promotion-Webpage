@@ -34,7 +34,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
   ];
 
   return (
-    <section id="home" className="min-h-screen lg:h-[982px] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black">
+    <section id="home" className="h-[100dvh] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black">
       {/* Background Gallery - Infinite Scroll */}
       <div className="absolute inset-0 z-0 select-none flex flex-col justify-center gap-[100px]">
         <div className="w-full">
