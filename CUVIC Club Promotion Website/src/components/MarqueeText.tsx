@@ -2,7 +2,7 @@ export function MarqueeText() {
   const text = "Let's Grow Together • CUVIC • Algorithm • Big Data • AI • Networking • ";
   
   return (
-    <div className="w-full overflow-hidden bg-white text-black py-12 border-y border-gray-800">
+    <div className="w-full overflow-hidden bg-white text-black py-12 border-y border-gray-800 mt-16">
       <div 
         className="flex whitespace-nowrap animate-text-marquee"
         style={{ width: 'max-content' }}

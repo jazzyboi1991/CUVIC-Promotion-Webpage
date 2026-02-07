@@ -90,7 +90,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
     return (
         <section
             id="home"
-            className="h-[100dvh] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black"
+            className="min-h-[100dvh] h-[100dvh] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black"
         >
             <div className="absolute inset-0 z-0 select-none flex flex-col justify-center gap-8 md:gap-12">
                 {[
