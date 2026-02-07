@@ -94,30 +94,29 @@ export function Hero({ isLoaded = false }: HeroProps) {
         >
             <div className="absolute inset-0 z-0 select-none flex flex-col justify-center gap-8 md:gap-12">
                 {[
-                    { row: imagesRow1, speed: 30, delay: 0 },
-                    { row: imagesRow2, speed: 25, delay: -12 },
-                    { row: imagesRow3, speed: 35, delay: -5 },
+                    { row: imagesRow1, direction: "left", speed: 30 },
+                    { row: imagesRow2, direction: "right", speed: 25 },
+                    { row: imagesRow3, direction: "left", speed: 35 },
                 ].map((config, rowIndex) => (
                     <div key={rowIndex} className="overflow-hidden">
                         <div 
-                            className="flex animate-scroll-left"
+                            className={`flex ${config.direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}
                             style={{ 
                                 width: 'max-content',
                                 animationDuration: `${config.speed}s`,
-                                animationDelay: `${config.delay}s`,
                             }}
                         >
                             {/* 첫 번째 세트 */}
                             {config.row.map((image, index) => (
                                 <div
                                     key={`row-${rowIndex}-1-${index}`}
-                                    className="shrink-0 px-2"
+                                    className="shrink-0 px-3"
                                 >
-                                    <div className="w-[180px] md:w-[280px] h-[120px] md:h-[180px] rounded-lg overflow-hidden">
+                                    <div className="w-[200px] md:w-[320px] rounded-lg overflow-hidden">
                                         <ImageWithFallback
                                             src={image.url}
                                             alt={image.alt}
-                                            className="w-full h-full object-cover object-center grayscale opacity-60"
+                                            className="w-full h-auto grayscale opacity-60"
                                             draggable="false"
                                         />
                                     </div>
@@ -127,13 +126,13 @@ export function Hero({ isLoaded = false }: HeroProps) {
                             {config.row.map((image, index) => (
                                 <div
                                     key={`row-${rowIndex}-2-${index}`}
-                                    className="shrink-0 px-2"
+                                    className="shrink-0 px-3"
                                 >
-                                    <div className="w-[180px] md:w-[280px] h-[120px] md:h-[180px] rounded-lg overflow-hidden">
+                                    <div className="w-[200px] md:w-[320px] rounded-lg overflow-hidden">
                                         <ImageWithFallback
                                             src={image.url}
                                             alt={image.alt}
-                                            className="w-full h-full object-cover object-center grayscale opacity-60"
+                                            className="w-full h-auto grayscale opacity-60"
                                             draggable="false"
                                         />
                                     </div>

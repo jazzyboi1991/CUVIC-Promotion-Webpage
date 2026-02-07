@@ -1713,6 +1713,22 @@ html {
 
 .animate-scroll-right {
     animation: scroll-right 25s linear infinite;
+    animation-fill-mode: backwards;
+    will-change: transform;
+}
+
+/* 텍스트 Marquee 애니메이션 */
+@keyframes text-marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-text-marquee {
+    animation: text-marquee 12s linear infinite;
     will-change: transform;
 }
 
