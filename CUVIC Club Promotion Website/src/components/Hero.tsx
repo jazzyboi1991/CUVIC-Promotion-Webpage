@@ -98,7 +98,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
                     { row: imagesRow2, direction: "right", speed: 25 },
                     { row: imagesRow3, direction: "left", speed: 35 },
                 ].map((config, rowIndex) => (
-                    <div key={rowIndex} className="overflow-hidden">
+                    <div key={rowIndex} className="overflow-hidden h-[100px] md:h-[150px] shrink-0">
                         <div 
                             className={`flex ${config.direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}
                             style={{ 
@@ -112,11 +112,11 @@ export function Hero({ isLoaded = false }: HeroProps) {
                                     key={`row-${rowIndex}-1-${index}`}
                                     className="shrink-0 px-3"
                                 >
-                                    <div className="w-[200px] md:w-[320px] rounded-lg overflow-hidden">
+                                    <div className="h-[100px] md:h-[150px] rounded-lg overflow-hidden">
                                         <ImageWithFallback
                                             src={image.url}
                                             alt={image.alt}
-                                            className="w-full h-auto grayscale opacity-60"
+                                            className="h-full w-auto grayscale opacity-60"
                                             draggable="false"
                                         />
                                     </div>
@@ -128,11 +128,11 @@ export function Hero({ isLoaded = false }: HeroProps) {
                                     key={`row-${rowIndex}-2-${index}`}
                                     className="shrink-0 px-3"
                                 >
-                                    <div className="w-[200px] md:w-[320px] rounded-lg overflow-hidden">
+                                    <div className="h-[100px] md:h-[150px] rounded-lg overflow-hidden">
                                         <ImageWithFallback
                                             src={image.url}
                                             alt={image.alt}
-                                            className="w-full h-auto grayscale opacity-60"
+                                            className="h-full w-auto grayscale opacity-60"
                                             draggable="false"
                                         />
                                     </div>
