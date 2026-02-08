@@ -49,12 +49,14 @@ export function Recruitment() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-row gap-4"
           >
-            <button
-              onClick={handleApply}
+            <a
+              href="https://forms.gle/3TjZ4FihBpY1WHFP8"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors"
             >
               Apply Now
-            </button>
+            </a>
             <button
               onClick={handleContact}
               className="border-2 border-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition-colors"
@@ -72,14 +74,14 @@ export function Recruitment() {
         >
           <div className="mb-8">
             <h3 className="font-bold text-xl mb-2">Leadership</h3>
-            <p>회장: 홍길동 (소프트웨어학과 22학번)</p>
+            <p>회장: 오다영 (소프트웨어학과 23학번)</p>
             <p className="text-gray-500 italic mt-1">"CUVIC과 함께 성장하는 개발자가 됩시다."</p>
           </div>
 
           <div className="border-t border-black/10 pt-8 mt-8 text-sm text-gray-500">
             <p>충북대학교 소프트웨어학과 학술 동아리</p>
-            <p className="mb-4">Email: cuvic@cbnu.ac.kr</p>
-            <p>© 2025 CUVIC. All rights reserved.</p>
+            <p className="mb-4">E-mail: cuvic@cbnu.ac.kr</p>
+            <p>© 2026 CUVIC. All rights reserved.</p>
           </div>
         </motion.div>
       </div>
