@@ -52,7 +52,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
             id="home"
             className="min-h-[100dvh] h-[100dvh] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black"
         >
-            <div className="absolute inset-0 z-0 select-none flex flex-col justify-center" style={{ gap: '12px', padding: '20px 0' }}>
+            <div className="absolute inset-0 z-0 select-none flex flex-col justify-start" style={{ gap: '24px', paddingTop: '70px', paddingBottom: '0' }}>
                 {[
                     { row: imagesRow1, direction: "left", speed: 30 },
                     { row: imagesRow2, direction: "right", speed: 26 },
@@ -61,7 +61,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
                     <div 
                         key={rowIndex} 
                         className="overflow-hidden shrink-0"
-                        style={{ height: '200px' }}
+                        style={{ height: '180px' }}
                     >
                         <div 
                             className={`flex ${config.direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}
@@ -76,7 +76,7 @@ export function Hero({ isLoaded = false }: HeroProps) {
                                 <div
                                     key={`row-${rowIndex}-1-${index}`}
                                     className="shrink-0"
-                                    style={{ width: '300px', height: '200px' }}
+                                    style={{ width: '270px', height: '180px' }}
                                 >
                                     <div className="w-full h-full rounded-lg overflow-hidden">
                                         <ImageWithFallback
@@ -88,12 +88,46 @@ export function Hero({ isLoaded = false }: HeroProps) {
                                     </div>
                                 </div>
                             ))}
-                            {/* 두 번째 세트 (복제 - 무한 루프 효과) */}
+                            {/* 두 번째 세트 (복제) */}
                             {config.row.map((image, index) => (
                                 <div
                                     key={`row-${rowIndex}-2-${index}`}
                                     className="shrink-0"
-                                    style={{ width: '300px', height: '200px' }}
+                                    style={{ width: '270px', height: '180px' }}
+                                >
+                                    <div className="w-full h-full rounded-lg overflow-hidden">
+                                        <ImageWithFallback
+                                            src={image.src}
+                                            alt={image.alt}
+                                            className="w-full h-full object-cover grayscale opacity-60"
+                                            draggable="false"
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                            {/* 세 번째 세트 (복제) */}
+                            {config.row.map((image, index) => (
+                                <div
+                                    key={`row-${rowIndex}-3-${index}`}
+                                    className="shrink-0"
+                                    style={{ width: '270px', height: '180px' }}
+                                >
+                                    <div className="w-full h-full rounded-lg overflow-hidden">
+                                        <ImageWithFallback
+                                            src={image.src}
+                                            alt={image.alt}
+                                            className="w-full h-full object-cover grayscale opacity-60"
+                                            draggable="false"
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                            {/* 네 번째 세트 (복제) */}
+                            {config.row.map((image, index) => (
+                                <div
+                                    key={`row-${rowIndex}-4-${index}`}
+                                    className="shrink-0"
+                                    style={{ width: '270px', height: '180px' }}
                                 >
                                     <div className="w-full h-full rounded-lg overflow-hidden">
                                         <ImageWithFallback
