@@ -1,34 +1,52 @@
-import { useEffect, useRef } from 'react';
-import { motion, useMotionValue, useSpring } from 'motion/react';
+import { useEffect, useRef } from "react";
 
 export function CustomCursor() {
-  const cursorX = useMotionValue(-100);
-  const cursorY = useMotionValue(-100);
+    const cursorRef = useRef<HTMLDivElement>(null);
+    const positionRef = useRef({ x: -100, y: -100 });
+    const targetRef = useRef({ x: -100, y: -100 });
+    const rafRef = useRef<number>(0);
 
-  const springConfig = { damping: 25, stiffness: 700 };
-  const cursorXSpring = useSpring(cursorX, springConfig);
-  const cursorYSpring = useSpring(cursorY, springConfig);
+    useEffect(() => {
+        // 마우스 위치 업데이트
+        const handleMouseMove = (e: MouseEvent) => {
+            targetRef.current = { x: e.clientX - 8, y: e.clientY - 8 };
+        };
 
-  useEffect(() => {
-    const moveCursor = (e: MouseEvent) => {
-      cursorX.set(e.clientX - 8);
-      cursorY.set(e.clientY - 8);
-    };
+        // requestAnimationFrame을 사용한 부드러운 보간
+        const animate = () => {
+            const lerp = (start: number, end: number, factor: number) => {
+                return start + (end - start) * factor;
+            };
 
-    window.addEventListener('mousemove', moveCursor);
+            // 현재 위치를 목표 위치로 부드럽게 보간 (0.5 = 50% 씩 이동)
+            positionRef.current.x = lerp(positionRef.current.x, targetRef.current.x, 0.5);
+            positionRef.current.y = lerp(positionRef.current.y, targetRef.current.y, 0.5);
 
-    return () => {
-      window.removeEventListener('mousemove', moveCursor);
-    };
-  }, [cursorX, cursorY]);
+            if (cursorRef.current) {
+                cursorRef.current.style.transform = `translate3d(${positionRef.current.x}px, ${positionRef.current.y}px, 0)`;
+            }
 
-  return (
-    <motion.div
-      className="hidden md:block fixed w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
-      style={{
-        left: cursorXSpring,
-        top: cursorYSpring,
-      }}
-    />
-  );
+            rafRef.current = requestAnimationFrame(animate);
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+        rafRef.current = requestAnimationFrame(animate);
+
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+            cancelAnimationFrame(rafRef.current);
+        };
+    }, []);
+
+    return (
+        <div
+            ref={cursorRef}
+            className="hidden md:block fixed w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
+            style={{
+                left: 0,
+                top: 0,
+                willChange: "transform",
+            }}
+        />
+    );
 }

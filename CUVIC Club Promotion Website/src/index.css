@@ -457,6 +457,15 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
+    /* 데스크톱(768px 이상)에서 시스템 커서 숨기기 - 커스텀 커서만 표시 */
+    @media (min-width: 768px) {
+        *,
+        *::before,
+        *::after {
+            cursor: none !important;
+        }
+    }
+
     img,
     svg,
     video {
