@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
-import { toast } from 'sonner';
 import logo from '../assets/f3a69a3d9c1caa53d0218732321738e09dc9445b.png';
 
 export function Recruitment() {
@@ -8,17 +7,6 @@ export function Recruitment() {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const handleApply = () => {
-    toast.success('지원서가 제출되었습니다!', {
-      description: '담당자가 곧 연락드리겠습니다.',
-      style: {
-        background: '#ffffff',
-        color: '#000000',
-        border: '1px solid #e5e5e5',
-      },
-    });
-  };
 
   const handleContact = () => {
     window.location.href = 'mailto:cuvic@cbnu.ac.kr';
