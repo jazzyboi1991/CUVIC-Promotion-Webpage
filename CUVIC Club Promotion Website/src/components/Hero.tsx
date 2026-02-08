@@ -1,138 +1,105 @@
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+// 로컬 이미지 import
+import img001 from "../assets/KakaoTalk_Image_2026-02-09-06-24-33_001.jpeg";
+import img002 from "../assets/KakaoTalk_Image_2026-02-09-06-24-33_002.jpeg";
+import img003 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_003.jpeg";
+import img004 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_004.jpeg";
+import img005 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_005.jpeg";
+import img006 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_006.jpeg";
+import img007 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_007.jpeg";
+import img008 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_008.jpeg";
+import img009 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_009.jpeg";
+import img010 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_010.jpeg";
+import img011 from "../assets/KakaoTalk_Image_2026-02-09-06-24-34_011.jpeg";
+import img012 from "../assets/KakaoTalk_Image_2026-02-09-06-25-23_001.jpeg";
+import img013 from "../assets/KakaoTalk_Image_2026-02-09-06-25-23_002.jpeg";
+import img014 from "../assets/KakaoTalk_Image_2026-02-09-06-25-23_003.jpeg";
+import img015 from "../assets/KakaoTalk_Image_2026-02-09-06-25-23_004.jpeg";
+
 interface HeroProps {
     isLoaded?: boolean;
 }
 
 export function Hero({ isLoaded = false }: HeroProps) {
-    const imagesRow1 = [
-        {
-            url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Teamwork",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Coding",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Team Meeting",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Workshop",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Developer",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Collaboration",
-        },
+    // 15개의 이미지를 무작위 순서로 배치 (고정된 무작위 순서)
+    const shuffledImages = [
+        { src: img007, alt: "CUVIC Activity 7" },
+        { src: img003, alt: "CUVIC Activity 3" },
+        { src: img012, alt: "CUVIC Activity 12" },
+        { src: img001, alt: "CUVIC Activity 1" },
+        { src: img009, alt: "CUVIC Activity 9" },
+        { src: img015, alt: "CUVIC Activity 15" },
+        { src: img005, alt: "CUVIC Activity 5" },
+        { src: img011, alt: "CUVIC Activity 11" },
+        { src: img002, alt: "CUVIC Activity 2" },
+        { src: img014, alt: "CUVIC Activity 14" },
+        { src: img008, alt: "CUVIC Activity 8" },
+        { src: img004, alt: "CUVIC Activity 4" },
+        { src: img010, alt: "CUVIC Activity 10" },
+        { src: img006, alt: "CUVIC Activity 6" },
+        { src: img013, alt: "CUVIC Activity 13" },
     ];
 
-    const imagesRow2 = [
-        {
-            url: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Workspace",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Discussion",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Brainstorming",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Tech Team",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Laptop Work",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Code Review",
-        },
-    ];
-
-    const imagesRow3 = [
-        {
-            url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Planning",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Group Study",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Team Building",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Conference",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Office Work",
-        },
-        {
-            url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600&h=200",
-            alt: "Seminar",
-        },
-    ];
+    // 3줄로 분할 (각 5개씩)
+    const imagesRow1 = shuffledImages.slice(0, 5);
+    const imagesRow2 = shuffledImages.slice(5, 10);
+    const imagesRow3 = shuffledImages.slice(10, 15);
 
     return (
         <section
             id="home"
             className="min-h-[100dvh] h-[100dvh] flex flex-col justify-center px-6 py-24 relative overflow-hidden bg-black"
         >
-            <div className="absolute inset-0 z-0 select-none flex flex-col justify-center gap-8 md:gap-12">
+            <div className="absolute inset-0 z-0 select-none flex flex-col justify-center" style={{ gap: '12px', padding: '20px 0' }}>
                 {[
                     { row: imagesRow1, direction: "left", speed: 30 },
-                    { row: imagesRow2, direction: "right", speed: 25 },
-                    { row: imagesRow3, direction: "left", speed: 35 },
+                    { row: imagesRow2, direction: "right", speed: 26 },
+                    { row: imagesRow3, direction: "left", speed: 34 },
                 ].map((config, rowIndex) => (
-                    <div key={rowIndex} className="overflow-hidden h-[100px] md:h-[150px] shrink-0">
+                    <div 
+                        key={rowIndex} 
+                        className="overflow-hidden shrink-0"
+                        style={{ height: '200px' }}
+                    >
                         <div 
                             className={`flex ${config.direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}
                             style={{ 
                                 width: 'max-content',
                                 animationDuration: `${config.speed}s`,
+                                gap: '10px',
                             }}
                         >
                             {/* 첫 번째 세트 */}
                             {config.row.map((image, index) => (
                                 <div
                                     key={`row-${rowIndex}-1-${index}`}
-                                    className="shrink-0 px-3"
+                                    className="shrink-0"
+                                    style={{ width: '300px', height: '200px' }}
                                 >
-                                    <div className="h-[100px] md:h-[150px] rounded-lg overflow-hidden">
+                                    <div className="w-full h-full rounded-lg overflow-hidden">
                                         <ImageWithFallback
-                                            src={image.url}
+                                            src={image.src}
                                             alt={image.alt}
-                                            className="h-full w-auto grayscale opacity-60"
+                                            className="w-full h-full object-cover grayscale opacity-60"
                                             draggable="false"
                                         />
                                     </div>
                                 </div>
                             ))}
-                            {/* 두 번째 세트 (복제) */}
+                            {/* 두 번째 세트 (복제 - 무한 루프 효과) */}
                             {config.row.map((image, index) => (
                                 <div
                                     key={`row-${rowIndex}-2-${index}`}
-                                    className="shrink-0 px-3"
+                                    className="shrink-0"
+                                    style={{ width: '300px', height: '200px' }}
                                 >
-                                    <div className="h-[100px] md:h-[150px] rounded-lg overflow-hidden">
+                                    <div className="w-full h-full rounded-lg overflow-hidden">
                                         <ImageWithFallback
-                                            src={image.url}
+                                            src={image.src}
                                             alt={image.alt}
-                                            className="h-full w-auto grayscale opacity-60"
+                                            className="w-full h-full object-cover grayscale opacity-60"
                                             draggable="false"
                                         />
                                     </div>
