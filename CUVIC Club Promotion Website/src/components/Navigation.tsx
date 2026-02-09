@@ -26,16 +26,16 @@ export function Navigation({ isLoaded = false }: NavigationProps) {
         transition={{ duration: 1, delay: 1.2 }}
         className={`fixed top-0 w-full z-50 text-white ${isMenuOpen ? '' : 'mix-blend-difference'}`}
       >
-        <div className="max-w-[1280px] mx-auto px-4 md:px-8 py-5 flex justify-between items-center relative z-[60]">
+        <div className="max-w-[1280px] mx-auto px-4 md:px-12 py-5 flex justify-between items-center relative z-[60]">
           <button 
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-extrabold tracking-tighter hover:opacity-70 transition-opacity"
+            className="text-2xl font-extrabold tracking-tighter hover:opacity-70 transition-opacity nav-logo-padding"
           >
             CUVIC.
           </button>
 
           {/* 데스크톱/태블릿 네비게이션 - CSS 미디어 쿼리로 표시/숨김 */}
-          <div className="nav-desktop items-center gap-4 md:gap-8 text-xs md:text-sm font-medium uppercase tracking-[0.2em]">
+          <div className="nav-desktop items-center gap-4 md:gap-8 text-xs md:text-sm font-medium uppercase tracking-[0.2em] nav-menu-padding">
             <button onClick={() => scrollToSection('home')} className="hover:underline underline-offset-4 px-3 py-1 hover:bg-white hover:text-black transition-all rounded">
               About
             </button>
@@ -88,6 +88,22 @@ export function Navigation({ isLoaded = false }: NavigationProps) {
               className="fixed inset-0 flex flex-col items-center justify-center"
               style={{ zIndex: 55, backgroundColor: 'black' }}
             >
+              {/* X 닫기 버튼 - 햄버거 메뉴와 같은 위치 */}
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="absolute top-0 right-0 p-5 text-white"
+                style={{ 
+                  top: '1rem', 
+                  right: '1.25rem',
+                }}
+                aria-label="메뉴 닫기"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="4" y1="4" x2="20" y2="20" />
+                  <line x1="20" y1="4" x2="4" y2="20" />
+                </svg>
+              </button>
+
               <nav className="flex flex-col items-center gap-8">
                 <motion.button
                   initial={{ opacity: 0, y: 20 }}
