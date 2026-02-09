@@ -41,7 +41,7 @@ export function CustomCursor() {
     return (
         <div
             ref={cursorRef}
-            className="hidden md:block fixed w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
+            className="hidden md:block fixed w-4 h-4 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference [@media(pointer:coarse)]:hidden"
             style={{
                 left: 0,
                 top: 0,

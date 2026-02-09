@@ -459,8 +459,8 @@
         overflow-wrap: break-word;
     }
 
-    /* 데스크톱(768px 이상)에서 시스템 커서 숨기기 - 커스텀 커서만 표시 */
-    @media (min-width: 768px) {
+    /* 데스트톱 및 마우스 사용 환경에서만 시스템 커서 숨기기 */
+    @media (min-width: 768px) and (pointer: fine) {
         *,
         *::before,
         *::after {
