@@ -17,9 +17,9 @@ export default function App() {
     <>
       {!isLoaded && <Preloader onComplete={() => setIsLoaded(true)} />}
       <CustomCursor />
+      <Navigation isLoaded={isLoaded} />
       <SmoothScroll>
         <div className="bg-[#050505] text-white antialiased selection:bg-white selection:text-black">
-          <Navigation isLoaded={isLoaded} />
           <Hero isLoaded={isLoaded} />
           <MarqueeText />
           <Activities />

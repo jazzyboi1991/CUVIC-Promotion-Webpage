@@ -1948,3 +1948,31 @@ html {
         opacity: 0.5;
     }
 }
+
+/* 네비게이션 반응형 클래스 */
+.nav-desktop {
+    display: flex !important;
+}
+
+.nav-mobile {
+    display: none !important;
+}
+
+@media (max-width: 639px) {
+    .nav-desktop {
+        display: none !important;
+    }
+
+    .nav-mobile {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        gap: 6px !important;
+        position: relative !important;
+        z-index: 60 !important;
+        cursor: pointer !important;
+    }
+}
