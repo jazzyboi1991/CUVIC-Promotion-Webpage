@@ -148,148 +148,150 @@ export function Hero({ isLoaded = false }: HeroProps) {
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/80 z-10 pointer-events-none" />
 
             {/* Content */}
-            <div className="max-w-[1280px] w-full mx-auto relative z-20">
-                <div className="overflow-hidden mb-5">
-                    <motion.h2
-                        initial={{ y: "120%" }}
-                        animate={isLoaded ? { y: 0 } : { y: "120%" }}
-                        transition={{
-                            duration: 1.5,
-                            delay: 0.4,
-                            ease: [0.76, 0, 0.24, 1],
-                        }}
-                        className="text-sm md:text-lg text-gray-400 uppercase tracking-[0.3em]"
-                    >
-                        <span>
-                            <span className="font-black text-white">C</span>
-                            hungbuk{" "}
-                            <span className="font-black text-white">U</span>niv.{" "}
-                            <span className="font-black text-white">Vi</span>
-                            sual{" "}
-                            <span className="font-black text-white">C</span>++
-                            Club
-                        </span>
-                    </motion.h2>
-                </div>
-
-                <div className="overflow-hidden mb-2">
-                    <motion.h1
-                        initial={{ y: "120%" }}
-                        animate={isLoaded ? { y: 0 } : { y: "120%" }}
-                        transition={{
-                            duration: 1.5,
-                            delay: 0.5,
-                            ease: [0.76, 0, 0.24, 1],
-                        }}
-                        className="text-5xl md:text-[100px] leading-[1.1] font-black tracking-tighter"
-                    >
-                        <span>NON-STRUCT</span>
-                    </motion.h1>
-                </div>
-
-                <div className="overflow-hidden mb-5">
-                    <motion.h1
-                        initial={{ y: "120%" }}
-                        animate={isLoaded ? { y: 0 } : { y: "120%" }}
-                        transition={{
-                            duration: 1.5,
-                            delay: 0.6,
-                            ease: [0.76, 0, 0.24, 1],
-                        }}
-                        className="text-5xl md:text-[100px] leading-[1.1] font-black tracking-tighter"
-                    >
-                        <span
-                            className="text-outline"
-                            style={{
-                                WebkitTextFillColor: "rgba(156, 163, 175, 0.5)",
-                                color: "rgba(156, 163, 175, 0.5)",
+            <div className="max-w-[1280px] w-full mx-auto px-4 md:px-12 relative z-20">
+                <div className="nav-logo-padding">
+                    <div className="overflow-hidden mb-5">
+                        <motion.h2
+                            initial={{ y: "120%" }}
+                            animate={isLoaded ? { y: 0 } : { y: "120%" }}
+                            transition={{
+                                duration: 1.5,
+                                delay: 0.4,
+                                ease: [0.76, 0, 0.24, 1],
                             }}
+                            className="text-sm md:text-lg text-gray-400 uppercase tracking-[0.3em]"
                         >
-                            DATA LAB.
-                        </span>
-                    </motion.h1>
-                </div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={
-                        isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                    }
-                    transition={{ duration: 1, delay: 1 }}
-                    className="mt-12"
-                >
-                    <div className="h-[1px] w-full bg-gradient-to-r from-gray-600 via-white to-gray-600 mb-8" />
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div>
-                            <p className="text-lg font-medium leading-relaxed text-gray-300">
-                                데이터 분석, 알고리즘, 그리고 프로그래밍의
-                                경계를 넘어 함께
-                                <br />
-                                성장하는 개발자 커뮤니티
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-5 text-sm text-gray-400 uppercase tracking-[0.2em]">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={
-                                    isLoaded
-                                        ? { opacity: 1, scale: 1 }
-                                        : { opacity: 0, scale: 0.8 }
-                                }
-                                transition={{ duration: 0.6, delay: 1.2 }}
-                            >
-                                <span className="block text-white text-2xl font-bold mb-1">
-                                    50+
-                                </span>
-                                Members
-                            </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={
-                                    isLoaded
-                                        ? { opacity: 1, scale: 1 }
-                                        : { opacity: 0, scale: 0.8 }
-                                }
-                                transition={{ duration: 0.6, delay: 1.3 }}
-                            >
-                                <span className="block text-white text-2xl font-bold mb-1">
-                                    12
-                                </span>
-                                Awards
-                            </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={
-                                    isLoaded
-                                        ? { opacity: 1, scale: 1 }
-                                        : { opacity: 0, scale: 0.8 }
-                                }
-                                transition={{ duration: 0.6, delay: 1.4 }}
-                            >
-                                <span className="block text-white text-2xl font-bold mb-1">
-                                    30+
-                                </span>
-                                Projects
-                            </motion.div>
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={
-                                    isLoaded
-                                        ? { opacity: 1, scale: 1 }
-                                        : { opacity: 0, scale: 0.8 }
-                                }
-                                transition={{ duration: 0.6, delay: 1.5 }}
-                            >
-                                <span className="block text-white text-2xl font-bold mb-1">
-                                    1995
-                                </span>
-                                Est.
-                            </motion.div>
-                        </div>
+                            <span>
+                                <span className="font-black text-white">C</span>
+                                hungbuk{" "}
+                                <span className="font-black text-white">U</span>niv.{" "}
+                                <span className="font-black text-white">Vi</span>
+                                sual{" "}
+                                <span className="font-black text-white">C</span>++
+                                Club
+                            </span>
+                        </motion.h2>
                     </div>
-                </motion.div>
+
+                    <div className="overflow-hidden mb-2">
+                        <motion.h1
+                            initial={{ y: "120%" }}
+                            animate={isLoaded ? { y: 0 } : { y: "120%" }}
+                            transition={{
+                                duration: 1.5,
+                                delay: 0.5,
+                                ease: [0.76, 0, 0.24, 1],
+                            }}
+                            className="text-5xl md:text-[100px] leading-[1.1] font-black tracking-tighter"
+                        >
+                            <span>NON-STRUCT</span>
+                        </motion.h1>
+                    </div>
+
+                    <div className="overflow-hidden mb-5">
+                        <motion.h1
+                            initial={{ y: "120%" }}
+                            animate={isLoaded ? { y: 0 } : { y: "120%" }}
+                            transition={{
+                                duration: 1.5,
+                                delay: 0.6,
+                                ease: [0.76, 0, 0.24, 1],
+                            }}
+                            className="text-5xl md:text-[100px] leading-[1.1] font-black tracking-tighter"
+                        >
+                            <span
+                                className="text-outline"
+                                style={{
+                                    WebkitTextFillColor: "rgba(156, 163, 175, 0.5)",
+                                    color: "rgba(156, 163, 175, 0.5)",
+                                }}
+                            >
+                                DATA LAB.
+                            </span>
+                        </motion.h1>
+                    </div>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={
+                            isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                        }
+                        transition={{ duration: 1, delay: 1 }}
+                        className="mt-12"
+                    >
+                        <div className="h-[1px] w-full bg-gradient-to-r from-gray-600 via-white to-gray-600 mb-8" />
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div>
+                                <p className="text-lg font-medium leading-relaxed text-gray-300">
+                                    데이터 분석, 알고리즘, 그리고 프로그래밍의
+                                    경계를 넘어 함께
+                                    <br />
+                                    성장하는 개발자 커뮤니티
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-5 text-sm text-gray-400 uppercase tracking-[0.2em]">
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={
+                                        isLoaded
+                                            ? { opacity: 1, scale: 1 }
+                                            : { opacity: 0, scale: 0.8 }
+                                    }
+                                    transition={{ duration: 0.6, delay: 1.2 }}
+                                >
+                                    <span className="block text-white text-2xl font-bold mb-1">
+                                        50+
+                                    </span>
+                                    Members
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={
+                                        isLoaded
+                                            ? { opacity: 1, scale: 1 }
+                                            : { opacity: 0, scale: 0.8 }
+                                    }
+                                    transition={{ duration: 0.6, delay: 1.3 }}
+                                >
+                                    <span className="block text-white text-2xl font-bold mb-1">
+                                        12
+                                    </span>
+                                    Awards
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={
+                                        isLoaded
+                                            ? { opacity: 1, scale: 1 }
+                                            : { opacity: 0, scale: 0.8 }
+                                    }
+                                    transition={{ duration: 0.6, delay: 1.4 }}
+                                >
+                                    <span className="block text-white text-2xl font-bold mb-1">
+                                        30+
+                                    </span>
+                                    Projects
+                                </motion.div>
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    animate={
+                                        isLoaded
+                                            ? { opacity: 1, scale: 1 }
+                                            : { opacity: 0, scale: 0.8 }
+                                    }
+                                    transition={{ duration: 0.6, delay: 1.5 }}
+                                >
+                                    <span className="block text-white text-2xl font-bold mb-1">
+                                        1995
+                                    </span>
+                                    Est.
+                                </motion.div>
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

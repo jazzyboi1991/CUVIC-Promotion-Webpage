@@ -1965,6 +1965,18 @@ body {
     display: none;
 }
 
+/* 데스크탑 전용 네비게이션 패딩 */
+@media (min-width: 640px) {
+    .nav-logo-padding {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    .nav-menu-padding {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
 @media (max-width: 639px) {
     .nav-desktop {
         display: none;
@@ -1974,18 +1986,6 @@ body {
         display: flex;
         flex-direction: column;
         gap: 6px;
-    }
-
-    /* 데스크탑 전용 네비게이션 패딩 */
-    @media (min-width: 640px) {
-        .nav-logo-padding {
-            padding-left: 2rem !important;
-            padding-right: 2rem !important;
-        }
-        .nav-menu-padding {
-            padding-left: 2rem !important;
-            padding-right: 2rem !important;
-        }
     }
 
     /* 모바일 네비게이션 정렬 (Hero 섹션 텍스트 라인과 일치) */
