@@ -14,64 +14,66 @@ export function Recruitment() {
 
   return (
     <footer id="join" className="min-h-screen lg:h-[982px] bg-white text-black py-24 px-6 relative flex items-center" ref={ref}>
-      <div className="max-w-[1280px] w-full mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="flex-1"
-        >
-          <div className="uppercase tracking-[0.3em] font-bold mb-4 text-sm">Recruitment</div>
-          <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-6">
-            JOIN
-            <br />
-            CUVIC
-          </h2>
-          <div className="space-y-2 text-lg font-medium mb-8">
-            <p>충북대학교 소프트웨어학과 재학생이라면 누구나.</p>
-            <p>모집 기간: 매 학기 초 (3월, 9월)</p>
-          </div>
+      <div className="max-w-[1280px] w-full mx-auto px-4 md:px-12">
+        <div className="nav-logo-padding flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-row gap-4"
+            transition={{ duration: 0.8 }}
+            className="flex-1"
           >
-            <a
-              href="https://forms.gle/3TjZ4FihBpY1WHFP8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors"
+            <div className="uppercase tracking-[0.3em] font-bold mb-4 text-sm">Recruitment</div>
+            <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-6">
+              JOIN
+              <br />
+              CUVIC
+            </h2>
+            <div className="space-y-2 text-lg font-medium mb-8">
+              <p>충북대학교 소프트웨어학과 재학생이라면 누구나.</p>
+              <p>모집 기간: 매 학기 초 (3월, 9월)</p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-row gap-4"
             >
-              Apply Now
-            </a>
-            <button
-              onClick={handleContact}
-              className="border-2 border-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition-colors"
-            >
-              Contact Us
-            </button>
+              <a
+                href="https://forms.gle/3TjZ4FihBpY1WHFP8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-colors"
+              >
+                Apply Now
+              </a>
+              <button
+                onClick={handleContact}
+                className="border-2 border-black px-8 py-4 rounded-full font-bold hover:bg-black hover:text-white transition-colors"
+              >
+                Contact Us
+              </button>
+            </motion.div>
           </motion.div>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-auto text-right"
-        >
-          <div className="mb-8">
-            <h3 className="font-bold text-xl mb-2">Leadership</h3>
-            <p>회장: 오다영 (소프트웨어학과 23학번)</p>
-            <p className="text-gray-500 italic mt-1">"CUVIC과 함께 성장하는 개발자가 됩시다."</p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="w-auto text-right"
+          >
+            <div className="mb-8">
+              <h3 className="font-bold text-xl mb-2">Leadership</h3>
+              <p>회장: 오다영 (소프트웨어학과 23학번)</p>
+              <p className="text-gray-500 italic mt-1">"CUVIC과 함께 성장하는 개발자가 됩시다."</p>
+            </div>
 
-          <div className="border-t border-black/10 pt-8 mt-8 text-sm text-gray-500">
-            <p>충북대학교 소프트웨어학과 학술 동아리</p>
-            <p className="mb-4">E-mail: cuvic@cbnu.ac.kr</p>
-            <p>© 2026 CUVIC. All rights reserved.</p>
-          </div>
-        </motion.div>
+            <div className="border-t border-black/10 pt-8 mt-8 text-sm text-gray-500">
+              <p>충북대학교 소프트웨어학과 학술 동아리</p>
+              <p className="mb-4">E-mail: cuvic@cbnu.ac.kr</p>
+              <p>© 2026 CUVIC. All rights reserved.</p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </footer>
   );
