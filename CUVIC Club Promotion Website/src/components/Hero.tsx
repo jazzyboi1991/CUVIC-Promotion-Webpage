@@ -225,9 +225,9 @@ export function Hero({ isLoaded = false }: HeroProps) {
                             <div>
                                 <p className="text-lg font-medium leading-relaxed text-gray-300">
                                     데이터 분석, 알고리즘, 그리고 프로그래밍의
-                                    경계를 넘어 함께
+                                    경계를 넘어
                                     <br />
-                                    성장하는 개발자 커뮤니티
+                                    함께 성장하는 개발자 커뮤니티
                                 </p>
                             </div>
 

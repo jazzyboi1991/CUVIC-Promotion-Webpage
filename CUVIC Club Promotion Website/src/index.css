@@ -455,6 +455,8 @@
         color: var(--foreground);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        word-break: keep-all;
+        overflow-wrap: break-word;
     }
 
     /* 데스크톱(768px 이상)에서 시스템 커서 숨기기 - 커스텀 커서만 표시 */
