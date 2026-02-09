@@ -1992,6 +1992,25 @@ body {
         padding-bottom: 4rem !important;
     }
 
+    /* Hero 이미지 슬라이드 모바일 최적화 */
+    #home > div.absolute.inset-0 {
+        gap: 20px !important;
+        padding-top: 55px !important;
+    }
+
+    #home > div.absolute.inset-0 > div.overflow-hidden {
+        height: 140px !important;
+    }
+
+    #home > div.absolute.inset-0 > div.overflow-hidden > div.flex {
+        gap: 10px !important;
+    }
+
+    #home > div.absolute.inset-0 > div.overflow-hidden > div.flex > div.shrink-0 {
+        width: 210px !important;
+        height: 140px !important;
+    }
+
     #home h1 {
         font-size: 2.25rem !important; /* text-4xl 수준 */
         letter-spacing: -0.03em !important;
